@@ -4,19 +4,8 @@ import emailjs from "emailjs-com";
 import './styles/itens.sass'
 
 function App() {
-  var menutipo = document.getElementsByClassName("menu")[0];
-
-  function showTipo() {
-    if (menutipo.style.display == "none") {
-      menutipo.style.display = "block";
-    } else {
-      menutipo.style.display = "none";
-    }
-  }
-
   function selectTipe(txt) {
     document.getElementById("tipo").value = txt
-    menutipo.style.display = "none"
   }
 
   var link = document.querySelectorAll(".item")
@@ -72,7 +61,6 @@ function App() {
         </div>
         <div className="tipo">
           <label htmlFor="">Selecione o tipo de manutenção</label>
-          <span onClick={showTipo}>Tipo <CaretDown weight="light" /></span>
           <div className="menu">
             <nav>
               <a class="item" href="#">Elétrica</a>
@@ -82,6 +70,7 @@ function App() {
               <a class="item" href="#">Pintura</a>
               <a class="item" href="#">Carpintaria</a>
               <a class="item" href="#">Limpesa</a>
+              <a class="item" href="#">Outros</a>
             </nav>
           </div>
         </div>
