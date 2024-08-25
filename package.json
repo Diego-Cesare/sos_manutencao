@@ -1,4 +1,5 @@
 {
+  "homepage": "https://Diego-Cesare.github.io/sos_manutencao",
   "name": "site_manutencao",
   "private": true,
   "version": "0.0.0",
@@ -7,7 +8,9 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "preload": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.1.7",
