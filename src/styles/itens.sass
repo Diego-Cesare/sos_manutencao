@@ -1,0 +1,106 @@
+@use 'variables'
+
+.main
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 2px, rgb(70, 80, 90) 0px 0px 0px 1px
+    padding: 3rem
+    border-radius: 1rem
+
+.titulo
+    display: flex
+    align-items: center
+    gap: 2rem
+    margin-bottom: 1rem
+
+label
+    color: variables.$fg-main
+    font-size: 1.2rem
+    padding: .1rem
+
+form
+    display: block
+
+.unidade, .end,.tel,.tipo
+    display: flex
+    flex-direction: column
+    gap: 0.2rem
+
+.info
+    display: flex
+    gap: 1rem
+
+.tipo
+    position: relative
+
+.tipo span
+    text-decoration: none
+    font-size: 1.2rem
+    color: variables.$fg-main
+    background-color: variables.$bg-alt
+    padding: 0.5rem 1rem
+    border-radius: .4rem
+    max-width: 35%
+    text-align: center
+    transition: all 0.4s ease
+    cursor: pointer
+    &:hover
+        background-color: variables.$hover-color
+        color: variables.$bg-main
+        svg
+            color: variables.$bg-main
+
+.menu
+    display: none
+    transition: all 1s
+
+nav
+    position: absolute
+    display: flex
+    flex-direction: column
+    background-color: variables.$bg-alt
+
+
+.menu nav a
+    text-decoration: none
+    color: variables.$fg-main
+    padding: 0.5rem 2rem
+    font-size: 1rem
+    background-color: transparent
+
+    &:hover
+        background-color: variables.$fg-main
+        color: variables.$bg-main
+
+textarea
+    min-height: 10rem
+    resize: vertical
+
+input, textarea
+    font-size: 1rem
+    border: none
+    background-color: variables.$bg-alt
+    color: variables.$fg-main
+    font-size: 1.1rem
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 2px, rgb(70, 80, 90) 0px 0px 0px 1px
+    padding: 0.6rem
+    border-radius: 0.3rem
+    width: 100%
+    margin-bottom: 1rem
+
+input:focus,
+textarea:focus
+    outline: none
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 2px, rgb(71, 89, 255) 0px 0px 0px 2px
+
+button
+    min-width: 100%
+    padding: 1rem
+    font-size: 1rem
+    font-weight: 600
+    background-color: variables.$bg-alt
+    border: none
+    border-radius: 0.4rem
+    color: variables.$fg-main
+    transition: 1s
+    &:hover
+        background-color: variables.$hover-color
+        color: variables.$bg-alt
