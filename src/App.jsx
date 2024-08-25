@@ -4,6 +4,8 @@ import emailjs from "emailjs-com";
 import './styles/itens.sass'
 
 function App() {
+  var menutipo = document.getElementsByClassName("menu")[0];
+
   function selectTipe(txt) {
     document.getElementById("tipo").value = txt
   }
@@ -21,10 +23,7 @@ function App() {
 
       });
     e.target.reset()
-
-
   }
-
 
   return (
     <div className='main'>
