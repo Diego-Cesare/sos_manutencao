@@ -8,16 +8,6 @@ function App() {
     document.getElementById("tipo").value = txt
   }
 
-  var link = document.querySelectorAll(".item")
-
-  link.forEach(function (links) {
-    links.addEventListener('click', function (event) {
-      event.preventDefault()
-      var texto = this.textContent
-      selectTipe(texto)
-    })
-  })
-
   function sendEmail(e) {
     e.preventDefault();
 
@@ -63,14 +53,14 @@ function App() {
           <label htmlFor="">Selecione o tipo de manutenção</label>
           <div className="menu">
             <nav>
-              <a class="item" href="#">Elétrica</a>
-              <a class="item" href="#">Hidraulica</a>
-              <a class="item" href="#">Esgoto</a>
-              <a class="item" href="#">Telhado</a>
-              <a class="item" href="#">Pintura</a>
-              <a class="item" href="#">Carpintaria</a>
-              <a class="item" href="#">Limpesa</a>
-              <a class="item" href="#">Outros</a>
+              <a className="item" href="#" onClick={() => selectTipe("Elétrica")}>Elétrica</a>
+              <a className="item" href="#" onClick={() => selectTipe("Hidraulica")}>Hidraulica</a>
+              <a className="item" href="#" onClick={() => selectTipe("Esgoto")}>Esgoto</a>
+              <a className="item" href="#" onClick={() => selectTipe("Telhado")}>Telhado</a>
+              <a className="item" href="#" onClick={() => selectTipe("Pintura")}>Pintura</a>
+              <a className="item" href="#" onClick={() => selectTipe("Carpintaria")}>Carpintaria</a>
+              <a className="item" href="#" onClick={() => selectTipe("Limpesa")}>Limpesa</a>
+              <a className="item" href="#" onClick={() => selectTipe("Outros")}>Outros</a>
             </nav>
           </div>
         </div>
