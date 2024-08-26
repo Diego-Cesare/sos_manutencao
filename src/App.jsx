@@ -1,4 +1,4 @@
-import { GearSix, BuildingOffice, MapPin, Phone, CaretDown } from "@phosphor-icons/react";
+import { GearSix, BuildingOffice, MapPin, Phone, HouseLine, Lightning, Broom, PaintRoller, Hammer, Drop, Pipe, Question } from "@phosphor-icons/react";
 import emailjs from "emailjs-com";
 
 import './styles/itens.sass'
@@ -16,10 +16,10 @@ function App() {
     emailjs.sendForm('service_xi26o83', 'template_4gyqkkj', e.target, '2hKcOoKCHUYuViiaO')
 
       .then((result) => {
-        alert("Mensagem enviada com sucesso! 👍");
+        alert("Seu pedido foi enviado com sucesso!\nEm breve uma equipe ira até sua unidade.");
 
       }, (error) => {
-        alert(error.message)
+        alert("No momento, não é possivel enviar seu pedido.\nAguarde ulguns instantes\ne tente novamente")
 
       });
     e.target.reset()
@@ -52,14 +52,14 @@ function App() {
           <label htmlFor="">Selecione o tipo de manutenção</label>
           <div className="menu">
             <nav>
-              <a className="item" href="#" onClick={() => selectTipe("Elétrica")}>Elétrica</a>
-              <a className="item" href="#" onClick={() => selectTipe("Hidraulica")}>Hidraulica</a>
-              <a className="item" href="#" onClick={() => selectTipe("Esgoto")}>Esgoto</a>
-              <a className="item" href="#" onClick={() => selectTipe("Telhado")}>Telhado</a>
-              <a className="item" href="#" onClick={() => selectTipe("Pintura")}>Pintura</a>
-              <a className="item" href="#" onClick={() => selectTipe("Carpintaria")}>Carpintaria</a>
-              <a className="item" href="#" onClick={() => selectTipe("Limpesa")}>Limpesa</a>
-              <a className="item" href="#" onClick={() => selectTipe("Outros")}>Outros</a>
+              <a className="item" href="#" onClick={() => selectTipe("Elétrica")}><Lightning weight="duotone" /></a>
+              <a className="item" href="#" onClick={() => selectTipe("Hidraulica")}><Drop weight="duotone" /></a>
+              <a className="item" href="#" onClick={() => selectTipe("Esgoto")}><Pipe weight="duotone" /></a>
+              <a className="item" href="#" onClick={() => selectTipe("Estrutural")}><HouseLine weight="duotone" /></a>
+              <a className="item" href="#" onClick={() => selectTipe("Pintura")}><PaintRoller weight="duotone" /></a>
+              <a className="item" href="#" onClick={() => selectTipe("Carpintaria")}><Hammer weight="duotone" /></a>
+              <a className="item" href="#" onClick={() => selectTipe("Limpesa")}><Broom weight="duotone" /></a>
+              <a className="item" href="#" onClick={() => selectTipe("Outros")}><Question weight="duotone" /></a>
             </nav>
           </div>
         </div>
@@ -67,7 +67,7 @@ function App() {
         <input id="tipo" type="text" placeholder="Aceita apenas 1 item!" required name="tipo" />
         <div className="pedidos">
           <label htmlFor="">Adicione as manutenções</label>
-          <textarea required name="pedido"></textarea>
+          <textarea placeholder="Pule para linha abaixo ao terminar um pedido!" required name="pedido"></textarea>
         </div>
         <button type="submit" >Enviar</button>
       </form>

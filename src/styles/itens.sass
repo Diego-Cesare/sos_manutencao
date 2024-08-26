@@ -1,9 +1,11 @@
 @use 'variables'
 
 .main
+    background-color: variables.$bg-main
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 2px, rgb(70, 80, 90) 0px 0px 0px 1px
     padding: 3rem
     border-radius: 1rem
+    backdrop-filter: blur(20px)
 
 .titulo
     display: flex
@@ -28,40 +30,23 @@ form
     display: flex
     gap: 1rem
 
-.tipo
-    position: relative
-
-.tipo span
-    text-decoration: none
-    font-size: 1.2rem
-    color: variables.$fg-main
-    background-color: variables.$bg-alt
-    padding: 0.5rem 1rem
-    border-radius: .4rem
-    max-width: 35%
-    text-align: center
-    transition: all 0.4s ease
-    cursor: pointer
-    &:hover
-        background-color: variables.$hover-color
-        color: variables.$bg-main
-        svg
-            color: variables.$bg-main
-
 nav
     display: grid
-    grid-template-rows: repeat(1, 1fr)
-    grid-template-columns: repeat(4, 1fr)
+    grid-template-rows: repeat(1, 0fr)
+    grid-template-columns: repeat(8, 0fr)
 
-.menu nav a
-    text-decoration: none
-    color: variables.$fg-main
-    padding: 0.5rem
-    font-size: 1rem
+nav a 
+    text-align: center
+    padding: 0.2rem 1rem
+    font-size: 2rem
+    @media screen and (max-width: 700px)
+        padding: 0.6rem
+        font-size: 1.3rem
 
+nav svg
+    color: #ffffff
     &:hover
-        background-color: variables.$fg-main
-        color: variables.$bg-main
+        color: variables.$hover-color
 
 .menu nav .item
     background-color: variables.$bg-alt
@@ -69,6 +54,7 @@ nav
     margin: 1px
 
 textarea
+    margin-top: 0.5rem
     min-height: 10rem
     resize: vertical
 
