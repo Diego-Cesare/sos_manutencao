@@ -4,7 +4,26 @@ import emailjs from "emailjs-com";
 import './styles/itens.sass'
 
 function App() {
-  var menutipo = document.getElementsByClassName("menu")[0];
+
+  let tipoList = ["Elétrica", "Hidraulica", "Esgoto", "Estrutural", "Pintura", "Carpintaria", "Limpesa", "Outros"]
+
+  function valideTipo() {
+    let valideTipo = document.getElementById("tipo").value
+    let valid = false
+
+    for (let i = 0; i < tipoList.length; i++) {
+      if (tipoList[i].toLowerCase() === valideTipo.toLowerCase()) {
+        valid = true;
+        break;
+      }
+    }
+
+    if (!valid) {
+      alert("Selecione um tipo de manutenção valida!")
+      document.getElementById("tipo").value = ""
+      document.getElementById("tipo").style.border = "solid 1px #f12345"
+    }
+  }
 
   function selectTipe(txt) {
     document.getElementById("tipo").value = txt
@@ -67,9 +86,9 @@ function App() {
         <input id="tipo" type="text" placeholder="Aceita apenas 1 item!" required name="tipo" />
         <div className="pedidos">
           <label htmlFor="">Adicione as manutenções</label>
-          <textarea placeholder="Pule para linha abaixo ao terminar um pedido!" required name="pedido"></textarea>
+          <textarea onClick={valideTipo} placeholder="Pule para linha abaixo ao terminar um pedido!" required name="pedido"></textarea>
         </div>
-        <button type="submit" >Enviar</button>
+        <button onClick={valideTipo} type="submit" >Enviar</button>
       </form>
     </div>
   )
