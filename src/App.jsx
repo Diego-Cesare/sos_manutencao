@@ -5,7 +5,7 @@ import './styles/itens.sass'
 
 function App() {
 
-  let tipoList = ["Elétrica", "Hidraulica", "Esgoto", "Estrutural", "Pintura", "Carpintaria", "Limpesa", "Outros"]
+  let tipoList = ["Elétrica", "Hidráulica", "Esgoto", "Estrutural", "Pintura", "Carpintaria", "Limpeza", "Outros"]
 
   function valideTipo() {
     let valideTipo = document.getElementById("tipo").value
@@ -35,10 +35,10 @@ function App() {
     emailjs.sendForm('service_xi26o83', 'template_4gyqkkj', e.target, '2hKcOoKCHUYuViiaO')
 
       .then((result) => {
-        alert("Seu pedido foi enviado com sucesso!\nEm breve uma equipe ira até sua unidade.");
+        alert("Seu pedido foi enviado com sucesso!\nEm breve, uma equipe irá até sua unidade.");
 
       }, (error) => {
-        alert("No momento, não é possivel enviar seu pedido.\nAguarde ulguns instantes\ne tente novamente")
+        alert("No momento, não é possível enviar seu pedido.\nAguarde alguns instantes\ne tente novamente.")
 
       });
     e.target.reset()
@@ -72,12 +72,12 @@ function App() {
           <div className="menu">
             <nav>
               <a className="item" href="#" onClick={() => selectTipe("Elétrica")}><Lightning weight="duotone" /></a>
-              <a className="item" href="#" onClick={() => selectTipe("Hidraulica")}><Drop weight="duotone" /></a>
+              <a className="item" href="#" onClick={() => selectTipe("Hidráulica")}><Drop weight="duotone" /></a>
               <a className="item" href="#" onClick={() => selectTipe("Esgoto")}><Pipe weight="duotone" /></a>
               <a className="item" href="#" onClick={() => selectTipe("Estrutural")}><HouseLine weight="duotone" /></a>
               <a className="item" href="#" onClick={() => selectTipe("Pintura")}><PaintRoller weight="duotone" /></a>
               <a className="item" href="#" onClick={() => selectTipe("Carpintaria")}><Hammer weight="duotone" /></a>
-              <a className="item" href="#" onClick={() => selectTipe("Limpesa")}><Broom weight="duotone" /></a>
+              <a className="item" href="#" onClick={() => selectTipe("Limpeza")}><Broom weight="duotone" /></a>
               <a className="item" href="#" onClick={() => selectTipe("Outros")}><Question weight="duotone" /></a>
             </nav>
           </div>
@@ -86,7 +86,7 @@ function App() {
         <input id="tipo" type="text" placeholder="Aceita apenas 1 item!" required name="tipo" />
         <div className="pedidos">
           <label htmlFor="">Adicione as manutenções</label>
-          <textarea onClick={valideTipo} placeholder="Pule para linha abaixo ao terminar um pedido!" required name="pedido"></textarea>
+          <textarea onClick={valideTipo} placeholder="Pule para a linha abaixo ao terminar um pedido!" required name="pedido"></textarea>
         </div>
         <button onClick={valideTipo} type="submit" >Enviar</button>
       </form>

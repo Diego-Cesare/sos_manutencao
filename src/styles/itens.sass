@@ -16,10 +16,9 @@
 label
     color: variables.$fg-main
     font-size: 1.2rem
-    padding: .1rem
-
-form
-    display: block
+    padding: 0.1rem
+    @media screen and (max-width: 700px)
+        font-size: 1rem
 
 .unidade, .end,.tel,.tipo
     display: flex
@@ -65,10 +64,13 @@ input, textarea
     color: variables.$fg-main
     font-size: 1.1rem
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 2px, rgb(70, 80, 90) 0px 0px 0px 1px
-    padding: 0.6rem
+    padding: 1rem 0.6rem
     border-radius: 0.3rem
     width: 100%
     margin-bottom: 1rem
+    @media screen and (max-width: 700px)
+        padding: 0.6rem
+        font-size: 1rem    
 
 input:focus,
 textarea:focus
