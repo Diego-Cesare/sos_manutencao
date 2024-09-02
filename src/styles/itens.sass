@@ -13,6 +13,11 @@
         width: 90%
         padding: 1rem
 
+form
+    display: flex
+    flex-direction: column
+    align-items: center
+
 .titulo
     display: flex
     align-items: center
@@ -27,6 +32,7 @@ label
 
 .unidade, .end,.tel,.tipo, .pedidos
     display: flex
+    width: 100%
     gap: 0.3rem
     flex-direction: column
 
@@ -45,7 +51,7 @@ nav a
     padding: 0.3rem 2.6rem
     font-size: 1.8rem
     @media screen and (max-width: 430px)
-        padding: 0.2rem 1.6rem
+        padding: 0.2rem 1.8rem
         font-size: 1.3rem
         -webkit-min-device-pixel-ratio: 2
     
@@ -85,7 +91,7 @@ textarea:focus
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 2px, rgb(71, 89, 255) 0px 0px 0px 2px
 
 button
-    min-width: 100%
+    width: 100%
     margin: 1rem
     padding: 1rem
     font-size: 1rem
