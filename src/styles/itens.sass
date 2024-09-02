@@ -6,8 +6,11 @@
     box-shadow: rgba(0, 0, 0, 0.16) 0px 12px 2px, rgb(70, 80, 90) 0px 0px 20px 1px
     padding: 2rem
     border-radius: 1rem
-    width: 90%
+    width: 100%
+    height: 95vh
     backdrop-filter: blur(20px)
+    @media screen and (max-width: 400px)
+        width: 90%
 
 .titulo
     display: flex
@@ -18,8 +21,8 @@
 label
     color: variables.$fg-main
     font-size: 1.3rem
-    @media screen and (max-width: 700px)
-        font-size: 1.1rem
+    @media screen and (max-width: 400px)
+        font-size: 1.2rem
 
 .unidade, .end,.tel,.tipo
     display: flex
@@ -38,8 +41,8 @@ nav a
     text-align: center
     padding: 0.3rem 2.6rem
     font-size: 1.8rem
-    @media screen and (max-width: 700px)
-        padding: 0.2rem 1.9rem
+    @media screen and (max-width: 400px)
+        padding: 0.2rem 1.3rem
         font-size: 1.3rem
         -webkit-min-device-pixel-ratio: 2
     
@@ -55,7 +58,7 @@ nav svg
     margin: 1px
 
 textarea
-    min-height: 8rem
+    min-height: 10rem
     resize: vertical
 
 input, textarea
@@ -65,12 +68,12 @@ input, textarea
     color: variables.$fg-main
     font-size: 1.1rem
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 2px, rgb(70, 80, 90) 0px 0px 0px 1px
-    padding: 0.5rem 0.6rem
+    padding: 0.9rem 0.6rem
     border-radius: 0.3rem
     width: 100%
     margin-bottom: 1rem
-    @media screen and (max-width: 700px)
-        padding: 0.5rem 0.3rem
+    @media screen and (max-width: 400px)
+        padding: 0.8rem 0.3rem
         font-size: 0.8rem    
 
 input:focus,
