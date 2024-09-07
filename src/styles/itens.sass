@@ -1,6 +1,9 @@
 @use 'variables'
 
 .main
+    display: flex
+    flex-direction: column
+    justify-content: space-between
     margin: 0 auto
     background-color: variables.$bg-main
     box-shadow: rgba(0, 0, 0, 0.16) 0px 12px 2px, rgb(70, 80, 90) 0px 0px 20px 1px
@@ -23,7 +26,7 @@ form
 .titulo
     display: flex
     align-items: center
-    justify-content: center
+    justify-content: start
     gap: 1rem
     margin-bottom: 1rem
 

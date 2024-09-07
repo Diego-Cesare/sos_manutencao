@@ -19,13 +19,23 @@ body
 
 h1
     color: variables.$fg-main
-    font-size: 2rem
+    font-size: 2.5rem
     @media screen and (max-width: 430px)
         font-size: 1.5rem
 
+@keyframes rotate
+    0%
+        transform: rotate(0deg)
+
+    100%
+        transform: rotate(360deg)
+
 i
-    font-size: 3rem
+    border-radius: 50%
+    display: flex
+    font-size: 4rem
     color: variables.$icons-color
+    animation: rotate 5s linear infinite
     @media screen and (max-width: 430px)
         font-size: 2rem
 
